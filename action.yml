@@ -1,5 +1,5 @@
 name: 'Simple Webhook Trigger'
-description: 'An extremely simple JavaScript action for triggering webhooks. Useful for triggering deploys on Cloudflare Pages, Netlify, etc., and other situations where you only need to send a simple request to a webhook URL.'
+description: 'An extremely simple JavaScript action for triggering webhooks.'
 author: '1ockwood'
 branding:
   icon: 'radio'
