@@ -1,0 +1,17 @@
+name: 'Simple Webhook Trigger'
+description: 'An extremely simple JavaScript action for triggering webhooks. Useful for triggering deploys on Cloudflare Pages, Netlify, etc., and other situations where you only need to send a simple request to a webhook URL.'
+author: '1ockwood'
+branding:
+  icon: 'radio'
+  color: 'yellow'
+inputs:
+  webhook-url:
+    description: 'The URL for the webhook.'
+    required: true
+  webhook-method:
+    description: 'The method used for triggering the webhook, e.g., `POST`, `GET`, etc. Defaults to `POST`.'
+    required: false
+    default: 'POST'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
