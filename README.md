@@ -2,7 +2,7 @@
 
 An extremely simple JavaScript action for triggering webhooks. Useful for triggering deploys on Cloudflare Pages, Netlify, etc., and other situations where you only need to send a simple request to a webhook URL.
 
-The code and dependencies ([@actions/core](https://github.com/actions/toolkit/tree/main/packages/core) and [node-fetch](https://github.com/node-fetch/node-fetch)) are compiled to `dist` using [@vercel/ncc](https://github.com/vercel/ncc).
+The code and dependencies ([@actions/core](https://github.com/actions/toolkit/tree/main/packages/core) are compiled to `dist` using [@vercel/ncc](https://github.com/vercel/ncc).
 
 ## Inputs
 
