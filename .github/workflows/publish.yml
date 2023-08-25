@@ -1,0 +1,24 @@
+##
+# Publish new action tag(s) for downstream consumption
+# https://docs.github.com/en/actions/creating-actions/releasing-and-maintaining-actions#setting-up-github-actions-workflows
+# https://github.com/github-developer/javascript-action/blob/main/.github/workflows/publish.yml
+##
+name: Publish
+on:
+  release:
+    types: [published, edited]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+      - uses: JasonEtco/build-and-tag-action@v2
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
