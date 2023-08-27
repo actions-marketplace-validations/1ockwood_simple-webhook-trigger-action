@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "An extremely simple JavaScript action for triggering webhooks. Useful for triggering deploys on Cloudflare Pages, Netlify, etc., and other situations where you only need to send a simple request to a webhook URL.",
   "main": "dist/index.js",
-  "type": "module",
   "scripts": {
-    "build": "ncc build index.js --license licenses.txt"
+    "build": "ncc build index.js --minify --no-cache --license licenses.txt"
   },
   "author": "1ockwood",
   "license": "MIT",
