@@ -1,5 +1,4 @@
-import core from '@actions/core';
-import fetch from 'node-fetch';
+const core = require('@actions/core');
 
 async function run(){
   try {
